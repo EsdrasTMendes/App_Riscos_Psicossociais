@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">softteck</string>
+    <string name="profile_user">Profile User</string>
+
+    <string name="hello">Olá,</string>
+    <string name="how_are_you">Como você está</string>
+
+    <string name="reading_for_you">Leitura para você</string>
+
+    <string name="description_internet">Suas comprinhas na internet significam mais do que você imagine.</string>
+    <string name="description_health">Como o esporte ajuda na sua saúde mental ?</string>
+    <string name="more">MAIS</string>
+
+    <string name="how_are_they">Como estão</string>
+    <string name="things_today">as coisas hoje?</string>
+
+    <string name="take_care">Fique Bem</string>
+    <string name="private_chat">Papo Privado</string>
+
+    <string name="take_caree">Fique Bem,</string>
+    <string name="seek_help">buscar ajuda é um ato de coragem</string>
+
+    <string name="contact_manager">Entre em contato com seu gerente de pessoas se você precisa de ajuda com assuntos relacionados ao ambiente de trabalho.</string>
+    <string name="click_here">Clique Aqui!</string>
+
+    <string name="chat">Papo</string>
+    <string name="particular">Particular</string>
+</resources>
