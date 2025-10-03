@@ -54,7 +54,7 @@ Para rodar este projeto, você precisará do Android Studio e de um emulador ou 
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://URL-DO-SEU-REPOSITORIO.git](https://URL-DO-SEU-REPOSITORIO.git)
+    git clone [git@github.com:EsdrasTMendes/App_Riscos_Psicossociais.git]
     ```
 
 2.  **Abra no Android Studio:**
@@ -63,6 +63,11 @@ Para rodar este projeto, você precisará do Android Studio e de um emulador ou 
 
 3.  **Configuração do Backend:**
     > ⚠️ **Importante:** Este aplicativo é um cliente para uma API REST. O servidor backend **deve estar em execução** para que o aplicativo funcione.
+    >
+    > **Link para o backEnd da aplicação**
+    ```
+        (https://github.com/EsdrasTMendes/Challenge-Softtek-Sprint2-FIAP-SDS)
+    ```
     - A URL base da API está configurada no arquivo `data/remote/ApiClient.kt`.
     - O endereço padrão para comunicação com um `localhost` a partir do emulador Android é `http://10.0.2.2:8080/`. Certifique-se de que seu backend está rodando na porta `8080`.
 
@@ -84,10 +89,10 @@ O projeto segue uma estrutura de pacotes clara para separação de responsabilid
 
 ## 👤 Autor
 
-**[SEU NOME AQUI]**
+**Esdras Tenório Mendes**
 
--   LinkedIn: `https://www.linkedin.com/login/pt`
--   GitHub: `https://www.youtube.com/watch?v=9ygf4hkLVnA`
+-   LinkedIn: `https://www.linkedin.com/in/esdrast/`
+-   GitHub: `https://github.com/EsdrasTMendes`
 
 ## 📄 Licença
 
