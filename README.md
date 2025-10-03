@@ -33,12 +33,6 @@ O aplicativo possui 3 fluxos principais, baseados no tipo de usuário:
 - **Check-in Diário:** Um formulário rápido e interativo com sliders para registrar humor, sono, estresse, etc.
 - **Questionário Semanal:** Um questionário completo e anônimo para avaliar os fatores de risco psicossociais, com UI dinâmica e barra de progresso.
 
-## 📸 Screenshots
-
-| Tela de Login | Painel de Admin | Questionário |
-| :---: | :---: | :---: |
-| <img src="URL_DO_SEU_SCREENSHOT_LOGIN.png" width="250"> | <img src="URL_DO_SEU_SCREENSHOT_ADMIN.png" width="250"> | <img src="URL_DO_SEU_SCREENSHOT_QUESTIONARIO.png" width="250"> |
-
 ## 🛠️ Tecnologias Utilizadas
 
 Este projeto foi construído utilizando as tecnologias mais modernas do ecossistema Android:
