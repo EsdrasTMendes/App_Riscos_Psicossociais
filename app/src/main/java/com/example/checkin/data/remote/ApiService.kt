@@ -48,7 +48,7 @@ interface ApiService {
         @Body request: RegisterAdminRequest
     ): Response<String>
 
-    @POST("api/relatorios/empresa")
+    @GET("api/relatorios/empresa")
     suspend fun getCompanyReports(
         @Header("Authorization") token: String
     ): Response<List<ReportResponseItem>>
