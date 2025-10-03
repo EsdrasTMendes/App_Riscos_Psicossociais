@@ -1,67 +1,35 @@
-package com.example.checkin.navigation
+package com.example.checkin
 
-import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import com.example.checkin.fiap.softteck.screens.*
-import android.content.Context
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import com.example.checkin.fiap.softteck.data.EmpresaRepository
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import com.example.checkin.navigation.AppNavGraph
+import com.example.checkin.ui.theme.MapeamentoDeRiscosTheme // <-- Substitua pelo nome do seu tema
 
-@Composable
-fun AppNavGraph(navController: NavHostController, context: Context) {
-    val repo = EmpresaRepository(context)
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge() // Opcional: Para o app usar a tela inteira (atrás das barras de status e navegação)
+        setContent {
+            // 1. Carrega o tema principal do seu App
+            MapeamentoDeRiscosTheme { // <-- Use o nome do seu tema aqui
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    // 2. Cria o NavController, que gerencia a navegação
+                    val navController = rememberNavController()
 
-    NavHost(
-        navController = navController,
-        startDestination = "Login"
-    ) {
-        // Tela de Login
-        composable("Login") {
-            var loginError by remember { mutableStateOf(false) }
-
-            LoginScreen(
-                onLoginClick = { email, senha ->
-                    repo.login(email, senha) { token ->
-                        if (token != null) {
-                            navController.navigate("HomeScreen") {
-                                popUpTo("Login") { inclusive = true }
-                            }
-                        } else {
-                            loginError = true
-                        }
-                    }
-                },
-                showError = loginError,
-                onDismissError = { loginError = false }
-            )
-        }
-
-
-        // Tela principal após login
-        composable("HomeScreen") {
-            HomeScreen(navController = navController)
-        }
-
-        // Demais telas que você já tinha
-        composable("perguntas") {
-            AutoAvaliacao1(navController = navController)
-        }
-        composable("HelpForumScreen") {
-            HelpForumScreen(navController = navController)
-        }
-        composable("helpStay") {
-            HelpStayWellScreen(navController = navController)
-        }
-        composable("forumModalAlert") {
-            ForumModalAlertScreen(navController = navController)
-        }
-        composable("TelaSentimentos") {
-            TelaSentimentos(navController)
+                    // 3. Chama o seu gráfico de navegação, que é o ponto de partida da sua UI
+                    AppNavGraph(navController = navController)
+                }
+            }
         }
     }
 }

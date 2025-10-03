@@ -43,13 +43,13 @@ android {
 }
 
 dependencies {
-    // Retrofit + Gson
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
-
     implementation("com.squareup.retrofit2:converter-scalars:3.0.0")
-
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
+    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+    implementation("androidx.compose.material:material-icons-extended-android:1.6.8")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.2")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
     implementation(libs.androidx.navigation.compose)
     implementation(libs.ui)
     implementation(libs.androidx.material)
